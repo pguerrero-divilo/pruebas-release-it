@@ -1,0 +1,23 @@
+{
+  "name": "pruebas-release-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "releaseit": "release-it --git.requireBranch=master --github.release --no-npm --no-git",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pguerrero-divilo/pruebas-release-it.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pguerrero-divilo/pruebas-release-it/issues"
+  },
+  "homepage": "https://github.com/pguerrero-divilo/pruebas-release-it#readme",
+  "dependencies": {
+    "release-it": "^14.0.3"
+  }
+}
