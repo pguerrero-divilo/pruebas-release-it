@@ -1,7 +1,15 @@
 {
-  "release": {
-    "branches": ["master", "next"]
-  },
+  "branches": [
+    { "name": "1.x", "range": "1.x", "channel": "1.x" },
+    { "name": "2.x", "range": "2.x", "channel": "2.x" },
+    { "name": "master" },
+    { "name": "next", "channel": "next" }
+  ],
+  "analyzeCommits": "@semantic-release/commit-analyzer",
+
+  "generateNotes": "@semantic-release/release-notes-generator",
+  "ci": false,
+
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -9,7 +17,26 @@
       "@semantic-release/github",
       {
         "repo": "https://pguerrero-divilo@github.com/pguerrero-divilo/pruebas-release-it.git",
-        "branch": "master"
+        "branch": "master",
+        "publish": true
+      }
+    ],
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          { "scope": "*", "release": "major" },
+
+          { "type": "feat", "scope": "*", "release": "major" },
+          { "type": "fix", "scope": "*", "release": "major" },
+          { "type": "docs", "scope": "*", "release": "major" },
+          { "type": "style", "scope": "*", "release": "major" },
+          { "type": "refactor", "scope": "*", "release": "major" },
+          { "type": "perf", "scope": "*", "release": "major" },
+          { "type": "test", "scope": "*", "release": "major" },
+          { "type": "chore", "scope": "*", "release": "major" }
+        ]
       }
     ]
   ]
