@@ -1,0 +1,16 @@
+{
+  "release": {
+    "branches": ["master", "next"]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/github",
+      {
+        "repo": "https://pguerrero-divilo@github.com/pguerrero-divilo/pruebas-release-it.git",
+        "branch": "master"
+      }
+    ]
+  ]
+}
